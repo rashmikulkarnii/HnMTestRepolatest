@@ -11,9 +11,9 @@ import org.apache.log4j.Logger;
 import com.HnM.qe.framework.api.helpers.APIJsonResponse;
 import com.HnM.qe.framework.api.helpers.JSONValidationUtils;
 import com.HnM.qe.framework.api.helpers.ProductsByCategoryResponse;
-import com.HnM.qe.framework.api.json.ErrorCode404Response;
-import com.HnM.qe.framework.api.json.JsonReaderCommon;
 import com.HnM.qe.framework.common.Constants;
+import com.aso.qe.framework.api.json.ErrorCode404Response;
+import com.aso.qe.framework.api.json.JsonReaderCommon;
 import com.github.fge.jsonschema.core.exceptions.ProcessingException;
 
 import cucumber.api.java.en.Given;
