@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>cucumber-jvm-example</td>
+                          <td>42</td>
+                        <td>17 Jul 2018, 18:15</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">Common_Web_SD.User_navigate_to_L2()</td>
+                <td>1</td>
+                <td class="duration" data-value="5486862831">5s 486ms</td>
+                <td class="duration" data-value="5486862831">5s 486ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Common_Web_SD.User_navigates_till_PLP()</td>
+                <td>2</td>
+                <td class="duration" data-value="13204984088">13s 204ms</td>
+                <td class="duration" data-value="6602492044">6s 602ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Common_Web_SD.User_navigates_to_L3()</td>
+                <td>1</td>
+                <td class="duration" data-value="63172139808">1m 3s 172ms</td>
+                <td class="duration" data-value="63172139808">1m 3s 172ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Common_Web_SD.user_closes_the_web_application()</td>
+                <td>39</td>
+                <td class="duration" data-value="20623136922">20s 623ms</td>
+                <td class="duration" data-value="528798382">528ms</td>
+                <td class="failed">74.36%</td>
+              </tr>
+                          <tr>
+                <td class="location">Common_Web_SD.user_launches_the_browser_and_navigates_to_page(String)</td>
+                <td>79</td>
+                <td class="duration" data-value="1961495251855">32m 41s 495ms</td>
+                <td class="duration" data-value="24829053820">24s 829ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Hooks.AfterSteps()</td>
+                <td>79</td>
+                <td class="duration" data-value="57940833676">57s 940ms</td>
+                <td class="duration" data-value="733428274">733ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Hooks.BeforeSteps(Scenario)</td>
+                <td>79</td>
+                <td class="duration" data-value="216647520">216ms</td>
+                <td class="duration" data-value="2742373">002ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1920_Web_SD.user_click_on_Add_to_cart_button()</td>
+                <td>3</td>
+                <td class="duration" data-value="33980579064">33s 980ms</td>
+                <td class="duration" data-value="11326859688">11s 326ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1920_Web_SD.user_click_on_checkout_button()</td>
+                <td>1</td>
+                <td class="duration" data-value="6418748426">6s 418ms</td>
+                <td class="duration" data-value="6418748426">6s 418ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1920_Web_SD.user_click_on_view_cart_button()</td>
+                <td>1</td>
+                <td class="duration" data-value="7207554831">7s 207ms</td>
+                <td class="duration" data-value="7207554831">7s 207ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1926_Web_SD.user_clicks_on_QandA_tab()</td>
+                <td>3</td>
+                <td class="duration" data-value="1348117314">1s 348ms</td>
+                <td class="duration" data-value="449372438">449ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1926_Web_SD.user_clicks_on_Reviews_tab()</td>
+                <td>3</td>
+                <td class="duration" data-value="1531977606">1s 531ms</td>
+                <td class="duration" data-value="510659202">510ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1926_Web_SD.user_clicks_on_the_Details_and_specs_tab()</td>
+                <td>1</td>
+                <td class="duration" data-value="505148126">505ms</td>
+                <td class="duration" data-value="505148126">505ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1926_Web_SD.user_clicks_on_the_product_card_and_navigates_to_PDP_of_the_product()</td>
+                <td>1</td>
+                <td class="duration" data-value="8526805330">8s 526ms</td>
+                <td class="duration" data-value="8526805330">8s 526ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1926_Web_SD.user_clicks_should_be_able_to_see_QandA_section()</td>
+                <td>2</td>
+                <td class="duration" data-value="74865">000ms</td>
+                <td class="duration" data-value="37432">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1926_Web_SD.user_clicks_should_be_able_to_see_the_closed_QandA_tab()</td>
+                <td>1</td>
+                <td class="duration" data-value="55517337718">55s 517ms</td>
+                <td class="duration" data-value="55517337718">55s 517ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1926_Web_SD.user_clicks_should_be_able_to_see_the_closed_reviews_tab()</td>
+                <td>1</td>
+                <td class="duration" data-value="1171202797">1s 171ms</td>
+                <td class="duration" data-value="1171202797">1s 171ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1926_Web_SD.user_enters_in_the_search_box(String)</td>
+                <td>6</td>
+                <td class="duration" data-value="43994965981">43s 994ms</td>
+                <td class="duration" data-value="7332494330">7s 332ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1926_Web_SD.user_is_able_to_see_the_Details_and_specs_tab_by_default_open()</td>
+                <td>1</td>
+                <td class="duration" data-value="103328682">103ms</td>
+                <td class="duration" data-value="103328682">103ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1926_Web_SD.user_is_able_to_see_three_tabs_in_the_detail_content_section()</td>
+                <td>1</td>
+                <td class="duration" data-value="181101181">181ms</td>
+                <td class="duration" data-value="181101181">181ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1926_Web_SD.user_navigates_to_PLP_of_any_product()</td>
+                <td>1</td>
+                <td class="duration" data-value="6280005929">6s 280ms</td>
+                <td class="duration" data-value="6280005929">6s 280ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1926_Web_SD.user_select_any_other_size_and_color_of_the_product_varient()</td>
+                <td>3</td>
+                <td class="duration" data-value="1105186403">1s 105ms</td>
+                <td class="duration" data-value="368395467">368ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1926_Web_SD.user_should_be_able_to_expand_and_colapse_reading_section_with_read_more_and_read_less_button()</td>
+                <td>1</td>
+                <td class="duration" data-value="23245">000ms</td>
+                <td class="duration" data-value="23245">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1926_Web_SD.user_should_be_able_to_see_Add_to_cart_button_and_quantity_section()</td>
+                <td>2</td>
+                <td class="duration" data-value="396136400">396ms</td>
+                <td class="duration" data-value="198068200">198ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1926_Web_SD.user_should_be_able_to_see_Image_of_the_product()</td>
+                <td>2</td>
+                <td class="duration" data-value="146289902">146ms</td>
+                <td class="duration" data-value="73144951">073ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1926_Web_SD.user_should_be_able_to_see_PDP_mention_in_the_current_url()</td>
+                <td>2</td>
+                <td class="duration" data-value="12614929">012ms</td>
+                <td class="duration" data-value="6307464">006ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1926_Web_SD.user_should_be_able_to_see_long_description_with_feature_and_benefits_section()</td>
+                <td>2</td>
+                <td class="duration" data-value="1049324983">1s 049ms</td>
+                <td class="duration" data-value="524662491">524ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1926_Web_SD.user_should_be_able_to_see_the_changed_value_of_the_sku_and_item()</td>
+                <td>3</td>
+                <td class="duration" data-value="361589563">361ms</td>
+                <td class="duration" data-value="120529854">120ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1926_Web_SD.user_should_be_able_to_see_the_name_of_the_product_in_title()</td>
+                <td>1</td>
+                <td class="duration" data-value="102271527">102ms</td>
+                <td class="duration" data-value="102271527">102ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1926_Web_SD.user_should_be_able_to_see_the_reviews_heading_and_section()</td>
+                <td>2</td>
+                <td class="duration" data-value="204302763">204ms</td>
+                <td class="duration" data-value="102151381">102ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1926_Web_SD.user_should_be_able_to_see_the_search_term_in_the_product_title()</td>
+                <td>1</td>
+                <td class="duration" data-value="115064561">115ms</td>
+                <td class="duration" data-value="115064561">115ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1926_Web_SD.user_should_be_able_to_see_the_sku_and_item_numbers_for_the_given_image()</td>
+                <td>5</td>
+                <td class="duration" data-value="1076173785">1s 076ms</td>
+                <td class="duration" data-value="215234757">215ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1926_Web_SD.user_should_see_different_attribute_and_size_of_the_product()</td>
+                <td>2</td>
+                <td class="duration" data-value="98004264">098ms</td>
+                <td class="duration" data-value="49002132">049ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1955_Web_SD.user_selects_Required_product_in_Product_Listing_Page()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1992_Web_SD.user_clicks_on_one_of_the_links_in_the_drawer()</td>
+                <td>1</td>
+                <td class="duration" data-value="4958768809">4s 958ms</td>
+                <td class="duration" data-value="4958768809">4s 958ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1992_Web_SD.user_clicks_on_the_Related_Categories_drawer()</td>
+                <td>1</td>
+                <td class="duration" data-value="166305829">166ms</td>
+                <td class="duration" data-value="166305829">166ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1992_Web_SD.user_is_able_to_see_Related_Categories_in_the_filters()</td>
+                <td>1</td>
+                <td class="duration" data-value="1428076574">1s 428ms</td>
+                <td class="duration" data-value="1428076574">1s 428ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_1992_Web_SD.user_navigates_to_the_respected_link()</td>
+                <td>1</td>
+                <td class="duration" data-value="9311243">009ms</td>
+                <td class="duration" data-value="9311243">009ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_2333_Web_SD.user_scroll_to_facets()</td>
+                <td>1</td>
+                <td class="duration" data-value="207219753">207ms</td>
+                <td class="duration" data-value="207219753">207ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_2333_Web_SD.user_verify_default_Category_facet_expand_and_all_other_facets_are_collapsed()</td>
+                <td>1</td>
+                <td class="duration" data-value="100406259">100ms</td>
+                <td class="duration" data-value="100406259">100ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_2339_Web_SD.user_click_on_the_breadcrumb_last_link()</td>
+                <td>1</td>
+                <td class="duration" data-value="117665491">117ms</td>
+                <td class="duration" data-value="117665491">117ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_2339_Web_SD.user_click_on_the_breadcrumb_last_second_link()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_2339_Web_SD.user_click_on_the_productimage()</td>
+                <td>11</td>
+                <td class="duration" data-value="90486094264">1m 30s 486ms</td>
+                <td class="duration" data-value="8226008569">8s 226ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_2339_Web_SD.user_verify_the_last_breadcrumb_in_the_series_should_not_be_an_active_link()</td>
+                <td>1</td>
+                <td class="duration" data-value="52564071">052ms</td>
+                <td class="duration" data-value="52564071">052ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_2339_Web_SD.user_verify_the_last_breadcrumb_in_the_series_should_not_be_an_active_link_for_last_link()</td>
+                <td>1</td>
+                <td class="duration" data-value="55565522833">55s 565ms</td>
+                <td class="duration" data-value="55565522833">55s 565ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_2339_Web_SD.user_verify_the_last_breadcrumb_in_the_series_should_not_be_an_active_link_for_second_link()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_244_Web_SD.user_clicks_on_one_of_the_category_card_and_navigates_to_category()</td>
+                <td>1</td>
+                <td class="duration" data-value="10208043863">10s 208ms</td>
+                <td class="duration" data-value="10208043863">10s 208ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_244_Web_SD.user_is_able_to_scroll_till_Featured_categroy_component()</td>
+                <td>1</td>
+                <td class="duration" data-value="31585474">031ms</td>
+                <td class="duration" data-value="31585474">031ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_244_Web_SD.user_is_able_to_see_number_of_category_card_displayed_in_a_row()</td>
+                <td>1</td>
+                <td class="duration" data-value="57206863">057ms</td>
+                <td class="duration" data-value="57206863">057ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Global_Header_SD.user_will_verify_the_presence_of_Find_a_Store()</td>
+                <td>3</td>
+                <td class="duration" data-value="165668145436">2m 45s 668ms</td>
+                <td class="duration" data-value="55222715145">55s 222ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Global_Header_SD.user_will_verify_the_presence_of_Sign_In()</td>
+                <td>3</td>
+                <td class="duration" data-value="538480231">538ms</td>
+                <td class="duration" data-value="179493410">179ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Global_Header_SD.user_will_verify_the_presence_of_WeeklyAD()</td>
+                <td>3</td>
+                <td class="duration" data-value="176819729">176ms</td>
+                <td class="duration" data-value="58939909">058ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Global_Header_SD.user_will_verify_the_presence_of_add_cart_icon()</td>
+                <td>3</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Global_Header_SD.user_will_verify_the_presence_of_deals_category()</td>
+                <td>3</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Global_Header_SD.user_will_verify_the_presence_of_search()</td>
+                <td>3</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Global_Header_SD.user_will_verify_the_presence_of_shop_category()</td>
+                <td>3</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Global_Header_SD.user_will_verify_the_presence_of_trending_category()</td>
+                <td>3</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Global_Social_Media_Web_SD.user_will_verify_the_presence_of_Facebook_icon()</td>
+                <td>3</td>
+                <td class="duration" data-value="165754636000">2m 45s 754ms</td>
+                <td class="duration" data-value="55251545333">55s 251ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Global_Social_Media_Web_SD.user_will_verify_the_presence_of_instagram_icon()</td>
+                <td>3</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Global_Social_Media_Web_SD.user_will_verify_the_presence_of_pinterest_icon()</td>
+                <td>3</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Global_Social_Media_Web_SD.user_will_verify_the_presence_of_twitter_icon()</td>
+                <td>3</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Global_Social_Media_Web_SD.user_will_verify_the_presence_of_youtube_icon()</td>
+                <td>3</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Web_Global_Footer_SD.user_will_verify_the_presence_of_Academy_Credit_Card()</td>
+                <td>3</td>
+                <td class="duration" data-value="429899277">429ms</td>
+                <td class="duration" data-value="143299759">143ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Web_Global_Footer_SD.user_will_verify_the_presence_of_Careers()</td>
+                <td>3</td>
+                <td class="duration" data-value="401925701">401ms</td>
+                <td class="duration" data-value="133975233">133ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Web_Global_Footer_SD.user_will_verify_the_presence_of_Check_Order()</td>
+                <td>3</td>
+                <td class="duration" data-value="1958434335">1s 958ms</td>
+                <td class="duration" data-value="652811445">652ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Web_Global_Footer_SD.user_will_verify_the_presence_of_Contact_Us()</td>
+                <td>3</td>
+                <td class="duration" data-value="325543929">325ms</td>
+                <td class="duration" data-value="108514643">108ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Web_Global_Footer_SD.user_will_verify_the_presence_of_Customer_Care()</td>
+                <td>3</td>
+                <td class="duration" data-value="294795847">294ms</td>
+                <td class="duration" data-value="98265282">098ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Web_Global_Footer_SD.user_will_verify_the_presence_of_FIND_A_STORE()</td>
+                <td>3</td>
+                <td class="duration" data-value="452153887">452ms</td>
+                <td class="duration" data-value="150717962">150ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Web_Global_Footer_SD.user_will_verify_the_presence_of_Gift_Cards()</td>
+                <td>3</td>
+                <td class="duration" data-value="410511848">410ms</td>
+                <td class="duration" data-value="136837282">136ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Web_Global_Footer_SD.user_will_verify_the_presence_of_Giving_Back()</td>
+                <td>3</td>
+                <td class="duration" data-value="436119954">436ms</td>
+                <td class="duration" data-value="145373318">145ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Web_Global_Footer_SD.user_will_verify_the_presence_of_Our_history()</td>
+                <td>3</td>
+                <td class="duration" data-value="351091961">351ms</td>
+                <td class="duration" data-value="117030653">117ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Web_Global_Footer_SD.user_will_verify_the_presence_of_Press_Room()</td>
+                <td>3</td>
+                <td class="duration" data-value="372466010">372ms</td>
+                <td class="duration" data-value="124155336">124ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Web_Global_Footer_SD.user_will_verify_the_presence_of_Product_Recall()</td>
+                <td>3</td>
+                <td class="duration" data-value="362397069">362ms</td>
+                <td class="duration" data-value="120799023">120ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Web_Global_Footer_SD.user_will_verify_the_presence_of_Rebates()</td>
+                <td>3</td>
+                <td class="duration" data-value="494116816">494ms</td>
+                <td class="duration" data-value="164705605">164ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Web_Global_Footer_SD.user_will_verify_the_presence_of_Return_Policy()</td>
+                <td>3</td>
+                <td class="duration" data-value="384301809">384ms</td>
+                <td class="duration" data-value="128100603">128ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Web_Global_Footer_SD.user_will_verify_the_presence_of_Store_Services()</td>
+                <td>3</td>
+                <td class="duration" data-value="374346371">374ms</td>
+                <td class="duration" data-value="124782123">124ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Web_Global_Footer_SD.user_will_verify_the_presence_of_Terms_and_conditions()</td>
+                <td>3</td>
+                <td class="duration" data-value="415493642">415ms</td>
+                <td class="duration" data-value="138497880">138ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Web_Global_Footer_SD.user_will_verify_the_presence_of_chat_now()</td>
+                <td>3</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Web_Global_Footer_SD.user_will_verify_the_presence_of_legal_policy()</td>
+                <td>3</td>
+                <td class="duration" data-value="446301191">446ms</td>
+                <td class="duration" data-value="148767063">148ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Web_Global_Footer_SD.user_will_verify_the_presence_of_privacy_policy()</td>
+                <td>3</td>
+                <td class="duration" data-value="1235866804">1s 235ms</td>
+                <td class="duration" data-value="411955601">411ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_262_Web_Global_Footer_SD.user_will_verify_the_presence_of_sign_up_for_more_deals()</td>
+                <td>3</td>
+                <td class="duration" data-value="166086423849">2m 46s 086ms</td>
+                <td class="duration" data-value="55362141283">55s 362ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_263_Web_SD.user_clicks_on_one_of_the_category_and_navigates_to_LOne_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="6515268989">6s 515ms</td>
+                <td class="duration" data-value="6515268989">6s 515ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_263_Web_SD.user_clicks_on_one_of_the_product_category_and_navigates_to_LThree_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="5133258087">5s 133ms</td>
+                <td class="duration" data-value="5133258087">5s 133ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_263_Web_SD.user_clicks_on_one_of_the_subcategory_and_navigates_to_LTwo_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="5669823242">5s 669ms</td>
+                <td class="duration" data-value="5669823242">5s 669ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_263_Web_SD.user_is_able_to_see_the_product_category_name_in_section_title()</td>
+                <td>3</td>
+                <td class="duration" data-value="278466081">278ms</td>
+                <td class="duration" data-value="92822027">092ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3237_Web_SD.User_click_on_clear_all_button()</td>
+                <td>1</td>
+                <td class="duration" data-value="10276956115">10s 276ms</td>
+                <td class="duration" data-value="10276956115">10s 276ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3237_Web_SD.User_click_on_the_matching_keyword()</td>
+                <td>1</td>
+                <td class="duration" data-value="6063406710">6s 063ms</td>
+                <td class="duration" data-value="6063406710">6s 063ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3237_Web_SD.User_click_on_the_search_icon()</td>
+                <td>1</td>
+                <td class="duration" data-value="9936184253">9s 936ms</td>
+                <td class="duration" data-value="9936184253">9s 936ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3237_Web_SD.User_enter_the_color_for_search()</td>
+                <td>1</td>
+                <td class="duration" data-value="91483827">091ms</td>
+                <td class="duration" data-value="91483827">091ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3237_Web_SD.User_should_be_able_to_see_Search_Box_on_Homepage()</td>
+                <td>1</td>
+                <td class="duration" data-value="106801117">106ms</td>
+                <td class="duration" data-value="106801117">106ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3237_Web_SD.User_should_not_see_duplicates_within_predictive_suggestions()</td>
+                <td>1</td>
+                <td class="duration" data-value="20186640834">20s 186ms</td>
+                <td class="duration" data-value="20186640834">20s 186ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3237_Web_SD.User_verifies_the_predictive_suggestions_for_matching_brand()</td>
+                <td>1</td>
+                <td class="duration" data-value="10316802016">10s 316ms</td>
+                <td class="duration" data-value="10316802016">10s 316ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3237_Web_SD.User_verifies_the_predictive_suggestions_for_matching_category()</td>
+                <td>3</td>
+                <td class="duration" data-value="31007523858">31s 007ms</td>
+                <td class="duration" data-value="10335841286">10s 335ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3237_Web_SD.User_verifies_the_predictive_suggestions_for_matching_keyword()</td>
+                <td>1</td>
+                <td class="duration" data-value="10278799044">10s 278ms</td>
+                <td class="duration" data-value="10278799044">10s 278ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3267_Web_SD.User_enter_the_SKU_search(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="225438334">225ms</td>
+                <td class="duration" data-value="225438334">225ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3267_Web_SD.User_enter_the_invalid_SKU_search(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="144637757">144ms</td>
+                <td class="duration" data-value="144637757">144ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3267_Web_SD.user_verifies_the_entered_SKU_id()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3267_Web_SD.user_verifies_the_error_null_search_result_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="98190519">098ms</td>
+                <td class="duration" data-value="98190519">098ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3268_Web_SD.User_enter_the_SKU_search(String)</td>
+                <td>2</td>
+                <td class="duration" data-value="301315981">301ms</td>
+                <td class="duration" data-value="150657990">150ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3268_Web_SD.user_verifies_the_entered_SKU_id()</td>
+                <td>1</td>
+                <td class="duration" data-value="55261106929">55s 261ms</td>
+                <td class="duration" data-value="55261106929">55s 261ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3274_Web_SD.User_enter_the_search(String)</td>
+                <td>4</td>
+                <td class="duration" data-value="375213047">375ms</td>
+                <td class="duration" data-value="93803261">093ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3274_Web_SD.User_verifies_the_label_for_closest_matching_term()</td>
+                <td>1</td>
+                <td class="duration" data-value="66378640">066ms</td>
+                <td class="duration" data-value="66378640">066ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3274_Web_SD.User_verifies_the_respective_search_results()</td>
+                <td>1</td>
+                <td class="duration" data-value="276754465">276ms</td>
+                <td class="duration" data-value="276754465">276ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3274_Web_SD.User_verifies_the_respective_search_results_clickable()</td>
+                <td>1</td>
+                <td class="duration" data-value="8905809588">8s 905ms</td>
+                <td class="duration" data-value="8905809588">8s 905ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3274_Web_SD.User_verifies_the_title_for_closest_matching_termUser_verifies_the_title_for_closest_matching_term()</td>
+                <td>1</td>
+                <td class="duration" data-value="302752892">302ms</td>
+                <td class="duration" data-value="302752892">302ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3276_Web_SD.User_verifies_the_Applicable_category_and_brand_and_on_LHS_displays_6_product_card()</td>
+                <td>1</td>
+                <td class="duration" data-value="14814110223">14s 814ms</td>
+                <td class="duration" data-value="14814110223">14s 814ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3276_Web_SD.User_verifies_the_predictive_suggestions_for_applicable_category()</td>
+                <td>1</td>
+                <td class="duration" data-value="10402168407">10s 402ms</td>
+                <td class="duration" data-value="10402168407">10s 402ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3276_Web_SD.user_verifies_the_title_of_search_of_6_product_card()</td>
+                <td>1</td>
+                <td class="duration" data-value="55050143057">55s 050ms</td>
+                <td class="duration" data-value="55050143057">55s 050ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3964_Web_SD.User_click_on_search_icon()</td>
+                <td>12</td>
+                <td class="duration" data-value="55807455456">55s 807ms</td>
+                <td class="duration" data-value="4650621288">4s 650ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3964_Web_SD.User_enter_the_color()</td>
+                <td>1</td>
+                <td class="duration" data-value="110480031">110ms</td>
+                <td class="duration" data-value="110480031">110ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3964_Web_SD.User_enter_the_data()</td>
+                <td>1</td>
+                <td class="duration" data-value="165505566">165ms</td>
+                <td class="duration" data-value="165505566">165ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3964_Web_SD.User_enter_the_null_data()</td>
+                <td>1</td>
+                <td class="duration" data-value="83453428">083ms</td>
+                <td class="duration" data-value="83453428">083ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3964_Web_SD.User_enter_the_search_data()</td>
+                <td>1</td>
+                <td class="duration" data-value="415058041">415ms</td>
+                <td class="duration" data-value="415058041">415ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3964_Web_SD.User_enter_the_search_data_which_has_pagination()</td>
+                <td>1</td>
+                <td class="duration" data-value="4134256981">4s 134ms</td>
+                <td class="duration" data-value="4134256981">4s 134ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3964_Web_SD.User_is_navigated_to_clp_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="220122669">220ms</td>
+                <td class="duration" data-value="220122669">220ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3964_Web_SD.User_is_navigated_to_null_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="55329406078">55s 329ms</td>
+                <td class="duration" data-value="55329406078">55s 329ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3964_Web_SD.User_is_navigated_to_pdp_page()</td>
+                <td>2</td>
+                <td class="duration" data-value="56561688454">56s 561ms</td>
+                <td class="duration" data-value="28280844227">28s 280ms</td>
+                <td class="failed">50.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3964_Web_SD.User_should_be_able_to_see_Search_Box_on_Homepage()</td>
+                <td>20</td>
+                <td class="duration" data-value="1857864461">1s 857ms</td>
+                <td class="duration" data-value="92893223">092ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_3964_Web_SD.User_verify_the_product_name()</td>
+                <td>1</td>
+                <td class="duration" data-value="156436123">156ms</td>
+                <td class="duration" data-value="156436123">156ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_552_Web_SD.user_deselects_multiple_PRICE_filter_Options()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_552_Web_SD.user_expands_BRAND_Filter_Option()</td>
+                <td>3</td>
+                <td class="duration" data-value="613817529">613ms</td>
+                <td class="duration" data-value="204605843">204ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_552_Web_SD.user_expands_COLOR_Filter_Option()</td>
+                <td>3</td>
+                <td class="duration" data-value="481608144">481ms</td>
+                <td class="duration" data-value="160536048">160ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_552_Web_SD.user_expands_PRICE_Filter_Option()</td>
+                <td>4</td>
+                <td class="duration" data-value="1325272245">1s 325ms</td>
+                <td class="duration" data-value="331318061">331ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_552_Web_SD.user_select_the_in_filters(String)</td>
+                <td>9</td>
+                <td class="duration" data-value="192794495">192ms</td>
+                <td class="duration" data-value="21421610">021ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_552_Web_SD.user_selects_multiple_PRICE_filter_Options()</td>
+                <td>1</td>
+                <td class="duration" data-value="18204996">018ms</td>
+                <td class="duration" data-value="18204996">018ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_552_Web_SD.user_should_be_able_to_see_the_deselected_PRICE_filter_Options_in_deselected_state()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_552_Web_SD.user_should_be_able_to_see_the_selected_PRICE_filter_Options_in_selected_state()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_555_Web_SD.user_should_be_able_to_unselect_the_same_checkbox_for_all_the_filters(String,String,String)</td>
+                <td>3</td>
+                <td class="duration" data-value="54157654">054ms</td>
+                <td class="duration" data-value="18052551">018ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_555_Web_SD.verify_the_selected_filtered_products_are_displayed_in_product_grid(String,String,String)</td>
+                <td>3</td>
+                <td class="duration" data-value="41185607">041ms</td>
+                <td class="duration" data-value="13728535">013ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_615_Web_SD.user_able_to_see_all_sorting_options_after_clicking_on_sort_by_filter(String>)</td>
+                <td>2</td>
+                <td class="duration" data-value="703195799">703ms</td>
+                <td class="duration" data-value="351597899">351ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_615_Web_SD.user_is_able_to_Best_selling_as_a_default_sort_option()</td>
+                <td>2</td>
+                <td class="duration" data-value="2043462629">2s 043ms</td>
+                <td class="duration" data-value="1021731314">1s 021ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_615_Web_SD.user_is_able_to_Most_Relevant_as_a_default_sort_option()</td>
+                <td>1</td>
+                <td class="duration" data-value="1079858435">1s 079ms</td>
+                <td class="duration" data-value="1079858435">1s 079ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_728_Web_SD.User_clicks_on_ASO_Logo()</td>
+                <td>4</td>
+                <td class="duration" data-value="58862347260">58s 862ms</td>
+                <td class="duration" data-value="14715586815">14s 715ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_728_Web_SD.User_is_able_to_see_the_ASO_logo()</td>
+                <td>4</td>
+                <td class="duration" data-value="949777850">949ms</td>
+                <td class="duration" data-value="237444462">237ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_728_Web_SD.User_should_be_navigated_to_Home_Page()</td>
+                <td>4</td>
+                <td class="duration" data-value="39426299">039ms</td>
+                <td class="duration" data-value="9856574">009ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">R1SP1_KER_729_Web_SD.User_should_be_able_to_see_Weekly_Ad_link()</td>
+                <td>6</td>
+                <td class="duration" data-value="664433013">664ms</td>
+                <td class="duration" data-value="110738835">110ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>136</td>
+              <td>583</td>
+              <td class="duration">57m 48s 329ms</td>
+              <td class="duration">5s 949ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
