@@ -39,7 +39,7 @@ public class HnM_Home_PagePO extends CommonActionHelper {
 	public void clickSignInLink(String Exptxt) throws InterruptedException
 	 
 	{
-		jse.executeScript("browserstack_executor: {\"action\": \"setSessionName\", \"arguments\": {\"name\":\"<Sign In>\" }}");
+	//	jse.executeScript("browserstack_executor: {\"action\": \"setSessionName\", \"arguments\": {\"name\":\"<Sign In>\" }}");
 		assertTrue(isDisplayed(Link_Sign_In));
 //		if(isDisplayed(Link_Sign_In))
 //		{
