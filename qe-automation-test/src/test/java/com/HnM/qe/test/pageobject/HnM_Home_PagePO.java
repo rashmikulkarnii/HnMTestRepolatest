@@ -24,7 +24,7 @@ public class HnM_Home_PagePO extends CommonActionHelper {
 	JavascriptExecutor jse = (JavascriptExecutor)driver;
 	
 	@FindBy(xpath="((//a[contains(text(),'Customer Service')])[1]")public WebElement Link_CustomerService;
-	@FindBy(xpath="(//a[contains(text(),'Connexion') or contains(text(),'Sign in')])[8]")public WebElement Link_Sign_In;
+	@FindBy(xpath="(//a[contains(text(),'Connexion') or contains(text(),'Sign in')])[1]")public WebElement Link_Sign_In;
 	@FindBy(xpath="((//button[@id=\"onetrust-accept-btn-handler\" or @id='onetrust-accept-btn-handler']))")public WebElement Btn_Accept_All_Cookies;
 	@FindBy(xpath="(//button[contains(text(),'DEVENIR MEMBRE') or contains(text(),'BECOME A MEMBER')])[1]")public WebElement Btn_Become_Member;
 

@@ -12,9 +12,9 @@ import com.HnM.qe.framework.api.helpers.APIJsonResponse;
 import com.HnM.qe.framework.api.helpers.JSONValidationUtils;
 import com.HnM.qe.framework.api.helpers.ProductsByCategoryResponse;
 import com.HnM.qe.framework.common.Constants;
-import com.aso.qe.framework.api.json.ErrorCode404Response;
-import com.aso.qe.framework.api.json.JsonReaderCommon;
 import com.github.fge.jsonschema.core.exceptions.ProcessingException;
+import com.qe.framework.api.json.ErrorCode404Response;
+import com.qe.framework.api.json.JsonReaderCommon;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;

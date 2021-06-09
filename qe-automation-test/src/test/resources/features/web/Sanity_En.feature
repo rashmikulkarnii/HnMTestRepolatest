@@ -1,6 +1,6 @@
 Feature: [UI]- To Verify H&M Header Links in English
 
-  @Web @All @C-HP @H&MRegression @Header
+  @Web @All @C-HP @H&MRegression @Header1
   Scenario Outline:  To Verify the Header link functionality
       Given user launches the browser and navigates to "H&M_HOME" page
       Then User clicks on Accept All Cookies
