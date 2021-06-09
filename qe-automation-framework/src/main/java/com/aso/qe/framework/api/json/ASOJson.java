@@ -1,4 +1,4 @@
-package com.HnM.qe.framework.api.json;
+package com.aso.qe.framework.api.json;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

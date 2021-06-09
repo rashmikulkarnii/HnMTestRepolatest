@@ -1,13 +1,13 @@
-package com.HnM.qe.framework.api.json;
+package com.aso.qe.framework.api.json;
 
 import org.apache.log4j.Logger;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import com.HnM.qe.framework.api.json.ErrorCode404Response;
-import com.HnM.qe.framework.api.json.ErrorCode500Response;
-import com.HnM.qe.framework.api.json.JsonReaderCommon;
+import com.aso.qe.framework.api.json.ErrorCode404Response;
+import com.aso.qe.framework.api.json.ErrorCode500Response;
+import com.aso.qe.framework.api.json.JsonReaderCommon;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class JsonReaderCommon {

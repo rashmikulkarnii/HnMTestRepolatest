@@ -11,8 +11,8 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import com.HnM.qe.framework.api.json.JsonReaderCommon;
 import com.HnM.qe.framework.common.PropertiesHelper;
+import com.aso.qe.framework.api.json.JsonReaderCommon;
 
 import io.restassured.http.ContentType;
 import io.restassured.http.Cookies;
